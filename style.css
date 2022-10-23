@@ -30,7 +30,7 @@ a:hover {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 4fr;
 	grid-template-rows: 1fr 4fr;
 	width: 100%;
 	height: 100vh;
@@ -48,50 +48,51 @@ a:hover {
 /* SIDEBAR LAYOUT + STYLING */
 
 .sidebar {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(10, 1fr);
-	align-items: center;
 	grid-column: 1 / 2;
 	grid-row: 1 / 3;
 	background-color: #0ea5e9;
+	border: 1px solid red;
 	color: white;
 }
 
-.sidebar-header {
-	font-size: 1.8rem;
-	font-weight: bold;
-}
-
-.sidebar a {
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-
-.sidebar div div {
-	width: 25%;
-}
-
-/* ---------- */
-
-.sidebar-list {
+.sidebar-item-wrapper {
 	display: grid;
-	row-gap: 15px;
-	grid-template-columns: 1fr 2fr;
-	grid-row: 2fr repeat(9, 1fr);
-	justify-items: center;
-	align-items: center;
 	margin-top: 1.5rem;
+	width: 100%;
+	grid-template-areas: repeat(10, 1fr) / 1fr;
+	border: 1px solid magenta;
 }
 
-.sidebar-list div {
-	grid-column: 1 / 2;
+.sidebar-item-wrapper div {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	/* border: 1px solid green; */
+	margin: 0.5rem 0;
+	font-weight: bold;
 }
 
-.sidebar-list a,
-.sidebar-header {
-	grid-column: 2 / 3;
-	justify-self: start;
+.sidebar-item-wrapper div:nth-child(2),
+.sidebar-item-wrapper div:nth-child(8) {
+	margin-top: 3rem;
+}
+
+.sidebar-item-wrapper .logo > img {
+	scale: 1.5;
+}
+
+.sidebar-item-wrapper .sidebar-header {
+	font-size: 1.8rem;
+}
+
+.sidebar-item-wrapper a {
+	font-size: 1.3rem;
+	display: inline;
+}
+
+.sidebar-item-wrapper div div {
+	width: 10%;
+	margin: 0 1.5rem;
 }
 
 /* MAIN CONTENT LAYOUT + STYLING */
