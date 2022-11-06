@@ -5,18 +5,9 @@
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
+	outline: 1px solid green;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-a {
-	text-decoration: none;
-	color: white;
-}
-
-.grid-container {
-	display: grid;
+body {
+	font-family: "Roboto", sans-serif;
 }
